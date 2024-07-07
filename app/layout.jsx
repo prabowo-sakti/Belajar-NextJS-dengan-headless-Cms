@@ -24,17 +24,7 @@ export default function Layout({ children }) {
             </ul>
           </nav>
         </header>
-        <main>
-          {children}
-          <ul>
-            <li>
-              <Link href="/blog/latihan-route-next">Latihan Route Next</Link>
-            </li>
-            <li>
-              <Link href="/blog/belajar-next">Belajar Next</Link>
-            </li>
-          </ul>
-        </main>
+        <main>{children}</main>
         <footer>[footer]</footer>
       </body>
     </html>
