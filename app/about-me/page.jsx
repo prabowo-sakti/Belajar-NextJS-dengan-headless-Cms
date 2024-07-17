@@ -1,7 +1,9 @@
+import Heading from "../../components/Header";
+
 export default function AboutMe() {
   return (
     <>
-      <h1>Tentang saya</h1>
+      <Heading>Tentang saya</Heading>
       <p>gigi saya sakit</p>
     </>
   );

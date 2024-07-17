@@ -1,31 +1,18 @@
-import Link from "next/link";
+import "./globals.css";
+import Navbar from "../components/Navbar";
+
 export default function Layout({ children }) {
   return (
     <html lang="eng">
       <head>
         <title>Belajar Next JS fundamental</title>
       </head>
-      <body>
+      <body className="flex flex-col px-4 py-4 min-h-screen">
         <header>
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link href="/about-me">About</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
+          <Navbar />
         </header>
-        <main>{children}</main>
-        <footer>[footer]</footer>
+        <main className="py-3 grow">{children}</main>
+        <footer className="border-t py-3 text-center text-xs">[footer]</footer>
       </body>
     </html>
   );

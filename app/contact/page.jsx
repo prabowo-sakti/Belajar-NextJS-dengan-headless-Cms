@@ -1,7 +1,9 @@
+import Heading from "../../components/Header";
+
 export default function Contact() {
   return (
     <>
-      <h1>Contact Me</h1>
+      <Heading>Contact Me</Heading>
       <p>gigi saya sakit</p>
     </>
   );

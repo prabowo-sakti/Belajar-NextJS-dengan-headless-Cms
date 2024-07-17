@@ -1,7 +1,9 @@
+import Heading from "../../../components/Header";
+
 export default function RoutePage() {
   return (
     <>
-      <h1>Route Page</h1>
+      <Heading>Route Page</Heading>
       <p>list of posts</p>
     </>
   );
