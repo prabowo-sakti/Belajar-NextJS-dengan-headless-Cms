@@ -1,9 +1,10 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import { roboto } from "./fonts";
 
 export default function Layout({ children }) {
   return (
-    <html lang="eng">
+    <html lang="eng" className={roboto.variable}>
       <head>
         <title>Belajar Next JS fundamental</title>
       </head>
