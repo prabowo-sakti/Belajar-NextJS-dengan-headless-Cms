@@ -1,4 +1,4 @@
-import Heading from "../../../components/Header";
+import Heading from "@/components/Header";
 
 export default function PostPage() {
   return (
