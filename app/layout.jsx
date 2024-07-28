@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { roboto } from "./fonts";
+import Footer from "@/components/Footer";
 
 export default function Layout({ children }) {
   return (
@@ -13,7 +14,9 @@ export default function Layout({ children }) {
           <Navbar />
         </header>
         <main className="py-3 grow">{children}</main>
-        <footer className="border-t py-3 text-center text-xs">[footer]</footer>
+        <footer className="">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
