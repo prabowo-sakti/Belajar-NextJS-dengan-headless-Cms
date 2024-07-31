@@ -1,6 +1,11 @@
 import Heading from "@/components/Header";
 import SharelinkButton from "@/components/ShareLinkButton";
-import { getPost } from "@/lib/getPost";
+import { getPost, getSlugs } from "@/lib/getPost";
+
+export async function generateStaticParams() {
+  const slugs = await getSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getPost(slug);

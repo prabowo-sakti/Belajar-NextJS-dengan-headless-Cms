@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "gray-matter": "^4.0.3",
     "marked": "^13.0.2",
     "next": "^14.2.5",
