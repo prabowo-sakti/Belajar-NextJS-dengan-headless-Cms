@@ -12,19 +12,24 @@ export default async function BlogPage() {
   const posts = await getAllPost();
   return (
     <>
-      <Heading>Blog</Heading>
-      <p className="text-2xl mb-3"></p>
+      <div className="overflow-y-auto">
+        <Heading>Blog</Heading>
+        <p className="text-sm mb-3">
+          Ini adalah konten yang ditulis yang dilakukan dengan riset, jadi bisa
+          di percaya ke orisinilan konten
+        </p>
 
-      {posts.map((post) => (
-        <PostCard
-          title={post.title}
-          img={post.image}
-          href={`/blog/${post.slug}`}
-          desc={post.desc}
-          date={post.date}
-          author={post.author}
-        />
-      ))}
+        {posts.map((post) => (
+          <PostCard
+            title={post.title}
+            img={post.image}
+            href={`/blog/${post.slug}`}
+            desc={post.desc}
+            date={post.date}
+            author={post.author}
+          />
+        ))}
+      </div>
     </>
   );
 }

@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 8,
+      "attributes": {
+        "slug": "apa-itu-next-image",
+        "title": "Apa itu Next/Image",
+        "description": "Next/Image adalah komponen bawaan Next.js yang dirancang khusus untuk mengoptimalkan gambar dan meningkatkan performa website kamu secara signifikan. 🚀",
+        "publishedAt": "2024-09-10T15:29:55.433Z",
+        "body": "## Memanjakan Mata Pengguna dengan Next/Image ✨\n\nHai, para pengembang web yang penuh semangat! 👋  Pernah merasa frustasi saat gambar di website kamu butuh waktu lama untuk dimuat, atau ukurannya tidak responsif di berbagai perangkat? Jangan khawatir, Next.js hadir dengan solusi ampuh: **Next/Image!**  💪\n\n**Next/Image** adalah komponen bawaan Next.js yang dirancang khusus untuk mengoptimalkan gambar dan meningkatkan performa website kamu secara signifikan.  🚀\n\n**Analogi Lezat:**\n\nBayangkan kamu ingin memesan pizza. Daripada membuat adonan sendiri, memanggangnya, dan repot dengan topping (cara lama memuat gambar), **Next/Image** seperti memesan pizza dari restoran favoritmu. Kamu cukup menentukan jenis pizza (gambar) dan ukuran yang diinginkan (layout), dan *voila*!  Pizza lezat (gambar optimal) siap disantap! 🍕\n\n###  Keunggulan Next/Image:\n\n- **Lazy Loading:**  Gambar hanya dimuat saat diperlukan, mempercepat waktu muat awal website.\n- **Image Optimization:**  Next.js secara otomatis mengompres dan mengubah ukuran gambar ke format yang optimal (WebP) untuk berbagai perangkat.\n- **Responsive Images:**  Gambar secara dinamis menyesuaikan ukurannya dengan berbagai ukuran layar, memberikan pengalaman pengguna yang optimal.\n- **Placeholder Blur:**  Menampilkan efek blur sementara gambar dimuat, memberikan kesan visual yang halus dan profesional.\n\n###  Penerapan Kode:\n\nSangat mudah menggunakan **Next/Image!**  Cukup impor komponen dan gunakan seperti tag `<img>` biasa:\n\n```javascript\nimport Image from 'next/image';\n\nfunction MyComponent() {\n  return (\n    <div>\n      <Image\n        src=\"/images/my-image.jpg\" // Path ke gambar\n        alt=\"Deskripsi gambar\" \n        width={500} // Lebar gambar (opsional)\n        height={300} // Tinggi gambar (opsional)\n        layout=\"responsive\" // Layout responsif (direkomendasikan)\n      />\n    </div>\n  );\n}\n```\n\n**Opsi Layout:**\n\n- `responsive`: Gambar menyesuaikan lebar container dan mempertahankan aspect ratio.\n- `intrinsic`:  Gambar menyesuaikan ukuran asli dan berkembang saat container membesar.\n- `fixed`: Gambar memiliki lebar dan tinggi tetap.\n- `fill`:  Gambar mengisi container sepenuhnya, mengabaikan aspect ratio.\n\n###  Kesimpulan:\n\n**Next/Image** adalah senjata rahasia untuk meningkatkan performa dan pengalaman pengguna website Next.js kamu. Dengan kemudahan penggunaan dan optimasi canggihnya, tak ada alasan untuk tidak memanjakan mata pengguna dengan gambar yang optimal dan responsif.  ✨\n\nSelamat mencoba dan teruslah berkarya! 🎉\n",
+        "image": {
+          "data": {
+            "id": 5,
+            "attributes": {
+              "url": "/uploads/next_js_image_component_1200x600_ce31e4c176.png"
+            }
+          }
+        },
+        "createdBy": {
+          "id": 1,
+          "firstname": "Prabowo",
+          "lastname": "Sakti"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "slug": "apa-itu-proses-diffing",
+        "title": "Apa itu proses Diffing",
+        "description": "Proses diffing di react benar benar unik yang dimana react menginstruksikan pada browser",
+        "publishedAt": "2024-09-10T15:27:18.389Z",
+        "body": "##  Mengintip Aksi Diffing di Balik Layar! 🕵️‍♀️\n\nHalo lagi, para developer! 👋  Siap melihat bagaimana algoritma **Diffing** bekerja dalam praktiknya? Yuk, kita simak contoh kasus yang simpel namun mencerahkan! ✨\n\n**Bayangkan kita punya dua Virtual DOM:**\n\n**Versi 1:**\n\n```html\n<ul>\n  <li>Belajar HTML</li>\n  <li>Belajar CSS</li>\n</ul>\n```\n\n**Versi 2:**\n\n```html\n<ul>\n  <li>Belajar HTML</li>\n  <li>Belajar CSS</li>\n  <li>Belajar JavaScript</li>\n</ul>\n```\n\n**Pertanyaannya:**  Bagaimana caranya agar browser kita bisa menampilkan perubahan ini seefisien mungkin, tanpa harus me-render ulang seluruh daftar? 🤔\n\nDi sinilah **Diffing** unjuk gigi! 💪  Alih-alih memperlakukan kedua versi sebagai entitas yang sama sekali berbeda, algoritma **Diffing** akan menganalisisnya secara cerdas dan menemukan perbedaan yang tepat:\n\n1. **Tree Reconciliation:** Algoritma **Diffing** akan membandingkan kedua struktur pohon Virtual DOM ini secara level per level:\n\n   ![Diffing Illustration 1](https://i.imgur.com/V9tHn3I.png)\n\n   -  Pada level pertama, kedua versi memiliki elemen `<ul>`. 👍\n   -  Pada level kedua,  kedua versi memiliki dua elemen `<li>` pertama yang identik. 👍\n   -  Perbedaan terdeteksi! Versi 2 memiliki elemen `<li>` tambahan: \"Belajar JavaScript\". \n\n2. **Minimal Update:** Berdasarkan hasil analisis, algoritma **Diffing** akan menginstruksikan browser untuk:\n   -  Membiarkan dua elemen `<li>` pertama apa adanya (karena tidak berubah).\n   -  Menambahkan elemen `<li>` baru \"Belajar JavaScript\" ke dalam daftar.\n\n**Hasilnya?**  Browser dapat memperbarui tampilan dengan sangat efisien, hanya dengan menambahkan elemen baru tanpa harus me-render ulang seluruh daftar.  ⚡️\n\n**Keuntungan Diffing:**\n\n- **Performa:**  Mempercepat pembaruan UI dengan hanya mengubah elemen yang diperlukan.\n- **User Experience:** Menghindari tampilan yang berkedip atau \"reload\" yang mengganggu.\n- **Efisiensi Kode:** Memudahkan developer untuk fokus pada logika aplikasi tanpa harus memikirkan detail manipulasi DOM.\n\n**Ingat:**  Contoh ini sangat sederhana untuk menggambarkan konsep dasar. Dalam aplikasi nyata, algoritma **Diffing** bekerja dengan struktur data yang jauh lebih kompleks. Namun, prinsip dasar dan tujuannya tetap sama:  **mengidentifikasi perubahan dengan cerdas dan memperbarui tampilan seefisien mungkin.** 🚀 \n\nSemoga penjelasan ini memberikan gambaran yang lebih jelas tentang keajaiban **Diffing** di balik layar aplikasi web modern! 😉 \n",
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "url": "/uploads/Group_2_2_4bb0395ba3.jpg"
+            }
+          }
+        },
+        "createdBy": {
+          "id": 1,
+          "firstname": "Prabowo",
+          "lastname": "Sakti"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "slug": "apa-itu-use-router",
+        "title": "Apa itu useRouter()?",
+        "description": "useRouter() adalah sebuah Hook yang disediakan oleh Next.js untuk memberikan akses ke objek router. Objek router ini ibarat peta harta karun yang menyimpan semua informasi penting tentang rute saat ini, riwayat navigasi, dan metode untuk mengendalikan navigasi dalam aplikasi kita.",
+        "publishedAt": "2024-09-08T12:26:38.366Z",
+        "body": "##  Menjelajahi Lautan Rute dengan `useRouter()` di Next.js! 🧭\n\nSalam hangat untuk para navigator web masa depan! 👋  Saat membangun aplikasi web dengan Next.js, kita seringkali perlu berpindah antar halaman atau mengakses informasi tentang rute saat ini. Di sinilah `useRouter()` datang sebagai nahkoda handal untuk memandu kita! 🚢\n\n### Apa Itu `useRouter()`? 🤔\n\n`useRouter()` adalah sebuah Hook yang disediakan oleh Next.js untuk memberikan akses ke objek `router`. Objek `router` ini ibarat peta harta karun yang menyimpan semua informasi penting tentang rute saat ini, riwayat navigasi, dan metode untuk mengendalikan navigasi dalam aplikasi kita.\n\n###  Kenapa `useRouter()` Begitu Istimewa? ✨\n\nBayangkan kamu sedang berlayar di lautan luas tanpa kompas atau peta. Sulit, bukan? Begitu pula dengan pengembangan aplikasi web. Tanpa `useRouter()`, kita akan kesulitan:\n\n- Mengetahui halaman apa yang sedang aktif.\n- Berpindah ke halaman lain secara dinamis.\n- Mengambil parameter atau query dari URL.\n- Memantau riwayat navigasi pengguna.\n\n`useRouter()`  memberikan kita kendali penuh atas navigasi, sehingga kita dapat membangun aplikasi web yang interaktif dan dinamis!\n\n###  Contoh Penerapan `useRouter()`:\n\n**1. Mengakses Informasi Rute:**\n\n```javascript\nimport { useRouter } from 'next/router';\n\nfunction MyComponent() {\n  const router = useRouter();\n\n  return (\n    <div>\n      <h1>Halaman Saat Ini: {router.pathname}</h1> \n      {/* Menampilkan path rute saat ini */}\n      <p>Query String: {JSON.stringify(router.query)}</p> \n      {/* Menampilkan objek query string */}\n    </div>\n  );\n}\n```\n\n**2.  Berpindah Halaman:**\n\n```javascript\nimport { useRouter } from 'next/router';\n\nfunction MyComponent() {\n  const router = useRouter();\n\n  const handleClick = () => {\n    // Berpindah ke halaman '/tentang'\n    router.push('/tentang'); \n  };\n\n  return (\n    <button onClick={handleClick}>Tentang Kami</button>\n  );\n}\n```\n\n**3. Mengambil Parameter Rute Dinamis:**\n\nMisalnya, kita memiliki rute dinamis `/produk/[id]`.\n\n```javascript\nimport { useRouter } from 'next/router';\n\nfunction ProductDetail() {\n  const router = useRouter();\n  const { id } = router.query; // Mengambil nilai 'id' dari URL\n\n  // ... logika untuk mengambil detail produk berdasarkan 'id'\n\n  return (\n    <div>\n      <h1>Detail Produk: {id}</h1> \n      {/* Menampilkan detail produk */}\n    </div>\n  );\n}\n```\n\n###  Kesimpulan:  Navigasi Lancar dengan `useRouter()`! 🚢\n\n`useRouter()` adalah alat yang sangat berguna dalam pengembangan aplikasi Next.js. Dengannya, kita dapat:\n\n- 🧭   Mengetahui rute saat ini dan informasi terkait.\n- 🛥️   Berpindah antar halaman dengan mudah.\n- 🗺️   Mengakses data dinamis dari URL.\n\nKuasai `useRouter()` dan navigasikan aplikasi Next.js kamu dengan lancar! 🚀 \n",
+        "image": {
+          "data": {
+            "id": 4,
+            "attributes": {
+              "url": "/uploads/013f484fb8c725f432d798b9658e1097_ec679f6bda.avif"
+            }
+          }
+        },
+        "createdBy": {
+          "id": 1,
+          "firstname": "Prabowo",
+          "lastname": "Sakti"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 3,
+      "pageCount": 2,
+      "total": 4
+    }
+  }
+}
