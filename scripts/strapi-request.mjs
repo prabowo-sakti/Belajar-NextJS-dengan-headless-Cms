@@ -6,6 +6,11 @@ const url =
   "?" +
   qs.stringify(
     {
+      filters: {
+        slug: {
+          $eq: "apa-itu-proses-diffing",
+        },
+      },
       locale: "en",
       fields: ["slug", "title", "description", "publishedAt", "body"],
       populate: {
@@ -13,7 +18,7 @@ const url =
         image: { fields: ["url"] },
       },
       sort: ["publishedAt:desc"],
-      pagination: { pageSize: 3 },
+      pagination: { pageSize: 1, withCount: false },
     },
     { encodeValuesOnly: true }
   );
