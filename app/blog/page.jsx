@@ -19,8 +19,9 @@ export default async function BlogPage() {
           di percaya ke orisinilan konten
         </p>
 
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <PostCard
+            key={index}
             title={post.title}
             img={post.image}
             href={`/blog/${post.slug}`}

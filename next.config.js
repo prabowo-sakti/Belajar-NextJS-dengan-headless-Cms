@@ -1,6 +1,7 @@
 const { hostname } = require("os");
 
 module.exports = {
+  distDir: "out",
   images: {
     remotePatterns: [
       {

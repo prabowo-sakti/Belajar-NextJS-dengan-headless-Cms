@@ -1,6 +1,29 @@
 {
   "data": [
     {
+      "id": 8,
+      "attributes": {
+        "slug": "apa-itu-next-image",
+        "title": "Apa itu Next/Image",
+        "description": "Next/Image adalah komponen bawaan Next.js yang dirancang khusus untuk mengoptimalkan gambar dan meningkatkan performa website kamu secara signifikan. 🚀",
+        "publishedAt": "2024-09-10T15:29:55.433Z",
+        "body": "## Memanjakan Mata Pengguna dengan Next/Image ✨\n\nHai, para pengembang web yang penuh semangat! 👋  Pernah merasa frustasi saat gambar di website kamu butuh waktu lama untuk dimuat, atau ukurannya tidak responsif di berbagai perangkat? Jangan khawatir, Next.js hadir dengan solusi ampuh: **Next/Image!**  💪\n\n**Next/Image** adalah komponen bawaan Next.js yang dirancang khusus untuk mengoptimalkan gambar dan meningkatkan performa website kamu secara signifikan.  🚀\n\n**Analogi Lezat:**\n\nBayangkan kamu ingin memesan pizza. Daripada membuat adonan sendiri, memanggangnya, dan repot dengan topping (cara lama memuat gambar), **Next/Image** seperti memesan pizza dari restoran favoritmu. Kamu cukup menentukan jenis pizza (gambar) dan ukuran yang diinginkan (layout), dan *voila*!  Pizza lezat (gambar optimal) siap disantap! 🍕\n\n###  Keunggulan Next/Image:\n\n- **Lazy Loading:**  Gambar hanya dimuat saat diperlukan, mempercepat waktu muat awal website.\n- **Image Optimization:**  Next.js secara otomatis mengompres dan mengubah ukuran gambar ke format yang optimal (WebP) untuk berbagai perangkat.\n- **Responsive Images:**  Gambar secara dinamis menyesuaikan ukurannya dengan berbagai ukuran layar, memberikan pengalaman pengguna yang optimal.\n- **Placeholder Blur:**  Menampilkan efek blur sementara gambar dimuat, memberikan kesan visual yang halus dan profesional.\n\n###  Penerapan Kode:\n\nSangat mudah menggunakan **Next/Image!**  Cukup impor komponen dan gunakan seperti tag `<img>` biasa:\n\n```javascript\nimport Image from 'next/image';\n\nfunction MyComponent() {\n  return (\n    <div>\n      <Image\n        src=\"/images/my-image.jpg\" // Path ke gambar\n        alt=\"Deskripsi gambar\" \n        width={500} // Lebar gambar (opsional)\n        height={300} // Tinggi gambar (opsional)\n        layout=\"responsive\" // Layout responsif (direkomendasikan)\n      />\n    </div>\n  );\n}\n```\n\n**Opsi Layout:**\n\n- `responsive`: Gambar menyesuaikan lebar container dan mempertahankan aspect ratio.\n- `intrinsic`:  Gambar menyesuaikan ukuran asli dan berkembang saat container membesar.\n- `fixed`: Gambar memiliki lebar dan tinggi tetap.\n- `fill`:  Gambar mengisi container sepenuhnya, mengabaikan aspect ratio.\n\n###  Kesimpulan:\n\n**Next/Image** adalah senjata rahasia untuk meningkatkan performa dan pengalaman pengguna website Next.js kamu. Dengan kemudahan penggunaan dan optimasi canggihnya, tak ada alasan untuk tidak memanjakan mata pengguna dengan gambar yang optimal dan responsif.  ✨\n\nSelamat mencoba dan teruslah berkarya! 🎉\n",
+        "image": {
+          "data": {
+            "id": 5,
+            "attributes": {
+              "url": "/uploads/next_js_image_component_1200x600_ce31e4c176.png"
+            }
+          }
+        },
+        "createdBy": {
+          "id": 1,
+          "firstname": "Prabowo",
+          "lastname": "Sakti"
+        }
+      }
+    },
+    {
       "id": 3,
       "attributes": {
         "slug": "apa-itu-proses-diffing",
@@ -22,12 +45,60 @@
           "lastname": "Sakti"
         }
       }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "slug": "apa-itu-use-router",
+        "title": "Apa itu useRouter()?",
+        "description": "useRouter() adalah sebuah Hook yang disediakan oleh Next.js untuk memberikan akses ke objek router. Objek router ini ibarat peta harta karun yang menyimpan semua informasi penting tentang rute saat ini, riwayat navigasi, dan metode untuk mengendalikan navigasi dalam aplikasi kita.",
+        "publishedAt": "2024-09-08T12:26:38.366Z",
+        "body": "##  Menjelajahi Lautan Rute dengan `useRouter()` di Next.js! 🧭\n\nSalam hangat untuk para navigator web masa depan! 👋  Saat membangun aplikasi web dengan Next.js, kita seringkali perlu berpindah antar halaman atau mengakses informasi tentang rute saat ini. Di sinilah `useRouter()` datang sebagai nahkoda handal untuk memandu kita! 🚢\n\n### Apa Itu `useRouter()`? 🤔\n\n`useRouter()` adalah sebuah Hook yang disediakan oleh Next.js untuk memberikan akses ke objek `router`. Objek `router` ini ibarat peta harta karun yang menyimpan semua informasi penting tentang rute saat ini, riwayat navigasi, dan metode untuk mengendalikan navigasi dalam aplikasi kita.\n\n###  Kenapa `useRouter()` Begitu Istimewa? ✨\n\nBayangkan kamu sedang berlayar di lautan luas tanpa kompas atau peta. Sulit, bukan? Begitu pula dengan pengembangan aplikasi web. Tanpa `useRouter()`, kita akan kesulitan:\n\n- Mengetahui halaman apa yang sedang aktif.\n- Berpindah ke halaman lain secara dinamis.\n- Mengambil parameter atau query dari URL.\n- Memantau riwayat navigasi pengguna.\n\n`useRouter()`  memberikan kita kendali penuh atas navigasi, sehingga kita dapat membangun aplikasi web yang interaktif dan dinamis!\n\n###  Contoh Penerapan `useRouter()`:\n\n**1. Mengakses Informasi Rute:**\n\n```javascript\nimport { useRouter } from 'next/router';\n\nfunction MyComponent() {\n  const router = useRouter();\n\n  return (\n    <div>\n      <h1>Halaman Saat Ini: {router.pathname}</h1> \n      {/* Menampilkan path rute saat ini */}\n      <p>Query String: {JSON.stringify(router.query)}</p> \n      {/* Menampilkan objek query string */}\n    </div>\n  );\n}\n```\n\n**2.  Berpindah Halaman:**\n\n```javascript\nimport { useRouter } from 'next/router';\n\nfunction MyComponent() {\n  const router = useRouter();\n\n  const handleClick = () => {\n    // Berpindah ke halaman '/tentang'\n    router.push('/tentang'); \n  };\n\n  return (\n    <button onClick={handleClick}>Tentang Kami</button>\n  );\n}\n```\n\n**3. Mengambil Parameter Rute Dinamis:**\n\nMisalnya, kita memiliki rute dinamis `/produk/[id]`.\n\n```javascript\nimport { useRouter } from 'next/router';\n\nfunction ProductDetail() {\n  const router = useRouter();\n  const { id } = router.query; // Mengambil nilai 'id' dari URL\n\n  // ... logika untuk mengambil detail produk berdasarkan 'id'\n\n  return (\n    <div>\n      <h1>Detail Produk: {id}</h1> \n      {/* Menampilkan detail produk */}\n    </div>\n  );\n}\n```\n\n###  Kesimpulan:  Navigasi Lancar dengan `useRouter()`! 🚢\n\n`useRouter()` adalah alat yang sangat berguna dalam pengembangan aplikasi Next.js. Dengannya, kita dapat:\n\n- 🧭   Mengetahui rute saat ini dan informasi terkait.\n- 🛥️   Berpindah antar halaman dengan mudah.\n- 🗺️   Mengakses data dinamis dari URL.\n\nKuasai `useRouter()` dan navigasikan aplikasi Next.js kamu dengan lancar! 🚀 \n",
+        "image": {
+          "data": {
+            "id": 4,
+            "attributes": {
+              "url": "/uploads/013f484fb8c725f432d798b9658e1097_ec679f6bda.avif"
+            }
+          }
+        },
+        "createdBy": {
+          "id": 1,
+          "firstname": "Prabowo",
+          "lastname": "Sakti"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "attributes": {
+        "slug": "membedah-rahasia-diffing",
+        "title": "Menjelaskan Proses Diffing terjadi",
+        "description": "Sederhananya, Diffing adalah proses yang cerdas untuk membandingkan dua struktur data dan menemukan perbedaan di antara keduanya. Dalam konteks pengembangan web, struktur data ini biasanya adalah Virtual DOM, representasi struktur HTML dari aplikasi kita.",
+        "publishedAt": "2024-09-08T12:01:15.366Z",
+        "body": "##  Halo Para Penjelajah Kode! 👋\n\nPernahkah kamu mengutak-atik kode, mengubah sesuatu yang tampaknya sepele, lalu *bam*!  Seluruh tampilan aplikasi berubah drastis? Jangan khawatir, itu bukan sihir hitam, melainkan algoritma **Diffing** yang sedang bekerja! 🪄\n\nDalam dunia pengembangan web, kita sering berurusan dengan perubahan data yang memengaruhi tampilan aplikasi. Bayangkan saja aplikasi to-do list. Setiap kali kamu menambahkan, menghapus, atau mencentang tugas, ada perubahan data yang harus ditampilkan dengan benar di layar. Di sinilah peran **Diffing** menjadi sangat penting, terutama dalam framework JavaScript modern seperti React, Vue, dan lainnya.\n\n###  Membedah Rahasia Diffing 🕵️‍♀️\n\n Sederhananya, **Diffing** adalah proses yang cerdas untuk membandingkan dua struktur data dan menemukan perbedaan di antara keduanya. Dalam konteks pengembangan web, struktur data ini biasanya adalah **Virtual DOM**, representasi struktur HTML dari aplikasi kita. \n\n**Analogi Sederhana:**\n\nBayangkan kamu punya dua naskah film, versi awal dan revisi. **Diffing** seperti editor film yang jeli, dengan cepat menandai bagian-bagian yang diubah, ditambahkan, atau dihapus, sehingga sutradara tahu persis apa yang perlu diperbarui dalam film tersebut tanpa harus merekam ulang semuanya! 🎬\n\n###  Bagaimana Cara Kerja Diffing? ⚙️\n\nMari kita bahas lebih dalam tentang algoritma **Diffing** yang umum digunakan:\n\n1. **Tree Reconciliation:** Alih-alih membandingkan setiap elemen satu per satu, **Diffing** cerdas dalam membandingkan **node** pada tingkat yang sama dalam struktur pohon Virtual DOM.  \n   \n   ![Tree Reconciliation Illustration](https://www.apollographql.com/blog/image-uploads/reconciliation/reconciliation.gif)\n\n2. **Heuristic (Aturan Cepat):** Untuk efisiensi, algoritma **Diffing** menggunakan beberapa aturan cepat, seperti:\n\n   -  Dua elemen dengan **tipe** berbeda selalu dianggap berbeda dan akan diganti seluruhnya. \n      - Misalnya,  `<div>` dan `<span>` selalu dianggap berbeda.\n   -  Elemen dengan **key** yang sama dianggap sebagai entitas yang sama, meskipun posisinya berubah.\n      -  Ini membantu melacak elemen yang diurutkan ulang dalam daftar.\n\n###  Contoh Kode (React):\n\n```javascript\n// Daftar awal\nconst oldList = [\n  { id: 1, text: 'Belajar React' },\n  { id: 2, text: 'Membuat Aplikasi' },\n];\n\n// Daftar setelah perubahan\nconst newList = [\n  { id: 1, text: 'Belajar React' },\n  { id: 3, text: 'Menjadi Master React' }, \n  { id: 2, text: 'Membuat Aplikasi' },\n];\n```\n\nDalam contoh ini, algoritma **Diffing** akan dengan cepat mengidentifikasi bahwa:\n   - Elemen dengan `id: 1`  dan `id: 2` tetap ada, meskipun posisinya berubah.\n   - Elemen dengan  `id: 3` adalah elemen baru.\n\nDengan informasi ini, React akan memperbarui tampilan dengan efisien, hanya mengubah bagian yang diperlukan.\n\n###  Kesimpulan: Diffing untuk Performa Aplikasi yang Luar Biasa 🚀\n\nMemahami **Diffing**  memberi kita wawasan tentang bagaimana framework JavaScript modern mengoptimalkan pembaruan UI. Dengan mendeteksi dan memperbarui hanya bagian yang berubah, **Diffing** membantu menjaga aplikasi kita tetap cepat, responsif, dan memberikan pengalaman pengguna yang lancar.\n\nTeruslah bereksperimen, dan sampai jumpa di petualangan kode selanjutnya! 👋\n",
+        "image": {
+          "data": {
+            "id": 3,
+            "attributes": {
+              "url": "/uploads/1_b97c494d8b.png"
+            }
+          }
+        },
+        "createdBy": {
+          "id": 1,
+          "firstname": "Prabowo",
+          "lastname": "Sakti"
+        }
+      }
     }
   ],
   "meta": {
     "pagination": {
       "page": 1,
-      "pageSize": 1
+      "pageSize": 6,
+      "pageCount": 1,
+      "total": 4
     }
   }
 }
